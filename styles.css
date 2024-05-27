@@ -1,0 +1,275 @@
+/* styles.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 0.9em;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    padding: 1.5em 0 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    animation: slideInDown 1s ease-out;
+}
+
+.banner {
+    width: 100%;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    padding: 1em 0;
+    border-bottom: 2px solid #ff6347;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 700;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    margin: 0.5em 0 0;
+    font-size: 1em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+nav {
+    margin-top: 1em;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    padding: 0.5em 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: slideInUp 1s ease-out;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    flex-wrap: wrap;
+}
+
+.nav-menu li {
+    margin: 0.5em 0;
+}
+
+.nav-menu a {
+    color: #ff6347;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: #ff4500;
+    color: #fff;
+}
+
+.nav-menu .social a {
+    background-color: #4CAF50;
+    color: white;
+}
+
+main {
+    padding: 1.5em 1em 3em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.track-list {
+    width: 45%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1em;
+    border-radius: 8px;
+    margin-bottom: 2em;
+    animation: fadeInUp 1s ease-out;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.track-list h2 {
+    color: #ff6347;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+#track-search {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    width: 100%;
+    border: 1px solid #ff6347;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ff6347;
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: left;
+    color: #ffffff;
+}
+
+th {
+    background-color: #ff6347;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(46, 61, 47, 0.8);
+}
+
+.latest-releases {
+    width: 45%;
+    animation: fadeInUp 1s ease-out;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.latest-releases h2 {
+    color: #ff6347;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.latest-releases .album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    justify-content: center;
+}
+
+.album-card {
+    background-color: rgba(46, 61, 47, 0.8);
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    animation: fadeInUp 1s ease-out;
+    text-align: center;
+}
+
+.album-card img {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+}
+
+.album-card p {
+    margin: 0.5em 0;
+}
+
+.album-card:hover {
+    transform: scale(1.05);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.pagination-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    margin: 0 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-btn:hover {
+    background-color: #76c893;
+}
+
+footer {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
