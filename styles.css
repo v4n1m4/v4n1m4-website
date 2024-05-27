@@ -1,5 +1,6 @@
 /* styles.css */
 
+/* Body */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -12,56 +13,76 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: white;
-    padding: 1.5em 0 1em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+/* Header */
+.header {
     position: relative;
-    z-index: 1;
-    animation: slideInDown 1s ease-out;
+    width: 100%;
+    z-index: 10;
 }
 
 .banner {
-    width: 100%;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    padding: 1em 0;
-    border-bottom: 2px solid #ff6347;
-    border-radius: 8px 8px 0 0;
     position: relative;
-}
-
-.banner img {
     width: 100%;
-    height: auto;
-    border-radius: 8px 8px 0 0;
+    height: 50vh;
+    background: url('hero-image-updated.png') no-repeat center center/cover;
 }
 
-header h1 {
-    font-size: 2em;
-    margin: 0;
-    font-weight: 700;
+.overlay {
     position: absolute;
-    bottom: 1em;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
 }
 
-header p {
-    margin: 0.5em 0 0;
-    font-size: 1em;
-    animation: fadeIn 2s ease-in-out;
-}
-
-nav {
-    margin-top: 1em;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+.artist-name {
+    font-size: 3em;
+    margin: 0;
     padding: 0.5em 0;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    animation: slideInUp 1s ease-out;
+}
+
+.published-tracks {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+.external-links {
+    margin-top: 1em;
+}
+
+.external-links .btn {
+    margin: 0.5em;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    color: #ffffff;
+    background: #28a745; /* Green button */
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.external-links .btn:hover {
+    background: #218838; /* Darker green on hover */
+    transform: scale(1.05);
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1em 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 .nav-menu {
@@ -69,37 +90,30 @@ nav {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 0.5em;
-    flex-wrap: wrap;
+    gap: 1em;
 }
 
 .nav-menu li {
-    margin: 0.5em 0;
+    margin: 0;
 }
 
 .nav-menu a {
-    color: #ff6347;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 1em;
-    font-weight: 700;
-    padding: 0.5em 1em;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.2em;
+    transition: color 0.3s;
 }
 
 .nav-menu a:hover {
-    background-color: #ff4500;
-    color: #fff;
+    color: #28a745; /* Green hover color */
 }
 
-.nav-menu .social a {
-    background-color: #4CAF50;
-    color: white;
-}
-
+/* Main Content */
 main {
-    padding: 1.5em 1em 3em;
+    padding: 2em 1em 5em;
     animation: fadeIn 2s ease-in-out;
+    position: relative;
+    z-index: 20;
 }
 
 .track-list {
@@ -226,6 +240,7 @@ footer {
     width: 100%;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
     margin-top: 2em;
+    z-index: 10;
 }
 
 footer p {

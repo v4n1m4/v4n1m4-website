@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevPageBtn = document.getElementById('prev-page');
     const nextPageBtn = document.getElementById('next-page');
     let currentPage = 1;
-    const albumsPerPage = 4;
+    const albumsPerPage = 2; /* Adjusted for two albums per row */
 
     function displayAlbums(page) {
         albumGrid.innerHTML = '';
