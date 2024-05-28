@@ -8,99 +8,181 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="background-overlay"></div>
     <header class="header">
-        <div class="banner">
-            <img src="hero-image.webp" alt="Hero Image" class="banner-image">
-            <div class="overlay">
-                <h1 class="artist-name">V4N1M4</h1>
-                <p class="published-tracks">Published Tracks: 20</p>
-                <div class="external-links">
-                    <a href="https://opensea.io" target="_blank" class="btn">OpenSea</a>
-                    <a href="https://rarible.com" target="_blank" class="btn">Rarible</a>
-                    <a href="https://mintable.app" target="_blank" class="btn">Mintable</a>
-                    <a href="https://zora.co" target="_blank" class="btn">Zora</a>
-                    <a href="https://foundation.app" target="_blank" class="btn">Foundation</a>
-                    <a href="https://audius.co" target="_blank" class="btn">Audius</a>
-                    <a href="https://superrare.com" target="_blank" class="btn">SuperRare</a>
-                    <a href="https://niftygateway.com" target="_blank" class="btn">Nifty Gateway</a>
-                    <a href="https://async.art" target="_blank" class="btn">Async Art</a>
-                    <a href="https://catalog.works" target="_blank" class="btn">Catalog</a>
-                </div>
-            </div>
+        <div class="logo">
+            <img src="v4n1m4.webp" alt="V4N1M4 Logo">
         </div>
-        <nav class="navbar">
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#tracks">Tracks</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
     </header>
     <main>
-        <div class="content">
-            <section class="track-list">
-                <h2>All Tracks</h2>
-                <input type="text" id="track-search" placeholder="Search tracks...">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Track Name</th>
-                            <th>Play Time</th>
-                            <th>Date Released</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Track 1</td>
-                            <td>3:45</td>
-                            <td>2024-01-01</td>
-                        </tr>
-                        <tr>
-                            <td>Track 2</td>
-                            <td>4:12</td>
-                            <td>2024-02-15</td>
-                        </tr>
-                        <tr>
-                            <td>Track 3</td>
-                            <td>2:58</td>
-                            <td>2024-03-22</td>
-                        </tr>
-                        <tr>
-                            <td>Track 4</td>
-                            <td>5:01</td>
-                            <td>2024-04-10</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section class="latest-releases">
-                <h2>Latest Releases</h2>
-                <div class="album-grid" id="album-grid">
-                    <div class="album-card">
-                        <img src="album-placeholder.png" alt="Album Cover">
-                        <h3>Album Name</h3>
-                        <p>Brief Description</p>
-                        <p><strong>Price:</strong> $10.00</p>
-                        <p><strong>Release Date:</strong> 2024-01-01</p>
-                    </div>
-                    <div class="album-card">
-                        <img src="album-placeholder.png" alt="Album Cover">
-                        <h3>Album Name</h3>
-                        <p>Brief Description</p>
-                        <p><strong>Price:</strong> $12.00</p>
-                        <p><strong>Release Date:</strong> 2024-02-15</p>
+        <section class="latest-releases" id="albums">
+            <h1 class="latest-releases-heading">Latest Releases (8)</h1>
+            <input type="text" id="album-search" placeholder="Search albums...">
+            <div class="album-carousel">
+                <button class="carousel-btn" id="prev-album"><</button>
+                <div class="album-display">
+                    <div class="album-wrapper">
+                        <!-- Albums will be dynamically added here by JavaScript -->
                     </div>
                 </div>
-                <div class="pagination">
-                    <button id="prev-page" class="pagination-btn">Previous</button>
-                    <button id="next-page" class="pagination-btn">Next</button>
+                <button class="carousel-btn" id="next-album">></button>
+            </div>
+        </section>
+        <section class="buttons-section">
+            <div class="overlay">
+                <div class="button-rows">
+                    <div class="row">
+                        <h3>NFT Marketplaces</h3>
+                        <a href="https://opensea.io" target="_blank" class="btn nft-btn">OpenSea</a>
+                        <a href="https://rarible.com" target="_blank" class="btn nft-btn">Rarible</a>
+                        <a href="https://mintable.app" target="_blank" class="btn nft-btn">Mintable</a>
+                        <a href="https://zora.co" target="_blank" class="btn nft-btn">Zora</a>
+                        <a href="https://foundation.app" target="_blank" class="btn nft-btn">Foundation</a>
+                        <a href="https://superrare.com" target="_blank" class="btn nft-btn">SuperRare</a>
+                        <a href="https://niftygateway.com" target="_blank" class="btn nft-btn">Nifty Gateway</a>
+                        <a href="https://async.art" target="_blank" class="btn nft-btn">Async Art</a>
+                        <a href="https://catalog.works" target="_blank" class="btn nft-btn">Catalog</a>
+                    </div>
+                    <div class="row">
+                        <h3>Social Media</h3>
+                        <a href="https://facebook.com" target="_blank" class="btn social-btn">Facebook</a>
+                        <a href="https://instagram.com" target="_blank" class="btn social-btn">Instagram</a>
+                        <a href="https://twitter.com" target="_blank" class="btn social-btn">Twitter</a>
+                        <a href="https://medium.com" target="_blank" class="btn social-btn">Medium</a>
+                        <a href="https://github.com" target="_blank" class="btn social-btn">GitHub</a>
+                        <a href="https://farcaster.xyz" target="_blank" class="btn social-btn">Farcaster</a>
+                        <a href="https://snapchat.com" target="_blank" class="btn social-btn">Snapchat</a>
+                    </div>
+                    <div class="row">
+                        <h3>Streaming Services</h3>
+                        <a href="#" class="btn streaming-btn">Amazon</a>
+                        <a href="#" class="btn streaming-btn">Anghami</a>
+                        <a href="#" class="btn streaming-btn">Apple Music</a>
+                        <a href="#" class="btn streaming-btn">Beatport</a>
+                        <a href="#" class="btn streaming-btn">Medianet</a>
+                        <a href="#" class="btn streaming-btn">Boomplay</a>
+                        <a href="#" class="btn streaming-btn">Deezer</a>
+                        <a href="#" class="btn streaming-btn">Instagram</a>
+                        <a href="#" class="btn streaming-btn">Adaptr</a>
+                        <a href="#" class="btn streaming-btn">Flo</a>
+                        <a href="#" class="btn streaming-btn">YouTube Music</a>
+                        <a href="#" class="btn streaming-btn">iHeartRadio</a>
+                        <a href="#" class="btn streaming-btn">Claro Musica</a>
+                        <a href="#" class="btn streaming-btn">iTunes</a>
+                        <a href="#" class="btn streaming-btn">Joox</a>
+                        <a href="#" class="btn streaming-btn">Kuack Media</a>
+                        <a href="#" class="btn streaming-btn">NetEase</a>
+                        <a href="#" class="btn streaming-btn">Qobuz</a>
+                        <a href="#" class="btn streaming-btn">Pandora</a>
+                        <a href="#" class="btn streaming-btn">Saavn</a>
+                        <a href="#" class="btn streaming-btn">Snapchat</a>
+                        <a href="#" class="btn streaming-btn">Spotify</a>
+                        <a href="#" class="btn streaming-btn">Tencent</a>
+                        <a href="#" class="btn streaming-btn">Tidal</a>
+                        <a href="#" class="btn streaming-btn">TikTok</a>
+                    </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+        <section class="about-section">
+            <div class="overlay">
+                <h2>About V4N1M4</h2>
+                <div class="about-carousel">
+                    <button class="carousel-btn" id="prev-about"><</button>
+                    <div class="about-wrapper">
+                        <button class="about-slide" data-content="history">History</button>
+                        <button class="about-slide" data-content="early-achievements">Early Achievements</button>
+                        <button class="about-slide" data-content="major-milestones">Major Milestones</button>
+                        <button class="about-slide" data-content="recent-works">Recent Works</button>
+                        <button class="about-slide" data-content="future-goals">Future Goals</button>
+                        <button class="about-slide" data-content="vision-mission">Vision and Mission</button>
+                    </div>
+                    <button class="carousel-btn" id="next-about">></button>
+                </div>
+                <div class="about-content">
+                    <!-- Content for each slide will be dynamically loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+        <section class="cta-section">
+            <div class="overlay">
+                <div class="cta-content">
+                    <img src="cta-image-placeholder.png" alt="CTA Image" class="cta-image">
+                    <div class="cta-text">
+                        <h1>Join the V4N1M4 Journey</h1>
+                        <h2>Discover, Support, and Enjoy</h2>
+                        <p>Be a part of the V4N1M4 community and support our ongoing projects and new releases. Your engagement and support help us grow and bring more amazing music to the world.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="artist-profile-section">
+            <div class="overlay">
+                <h2>Artist Profile</h2>
+                <div class="artist-info">
+                    <div class="profile-section">
+                        <h3>Top 10 Goals</h3>
+                        <ul>
+                            <li>Goal 1</li>
+                            <li>Goal 2</li>
+                            <li>Goal 3</li>
+                            <!-- Add more goals -->
+                        </ul>
+                    </div>
+                    <div class="profile-section">
+                        <h3>Top 10 Achievements</h3>
+                        <ul>
+                            <li>Achievement 1</li>
+                            <li>Achievement 2</li>
+                            <li>Achievement 3</li>
+                            <!-- Add more achievements -->
+                        </ul>
+                    </div>
+                    <div class="profile-section">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li>Skill 1</li>
+                            <li>Skill 2</li>
+                            <li>Skill 3</li>
+                            <!-- Add more skills -->
+                        </ul>
+                    </div>
+                    <div class="profile-section">
+                        <h3>Occupation</h3>
+                        <p>Current occupation details...</p>
+                    </div>
+                    <div class="profile-section">
+                        <h3>Insights</h3>
+                        <p>Additional insights...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cta-contact-section">
+            <div class="overlay">
+                <div class="cta-contact-content">
+                    <div class="cta-funding">
+                        <h2>Support V4N1M4</h2>
+                        <p>Your support helps us continue creating and sharing amazing music. Consider funding our projects and be part of our journey.</p>
+                    </div>
+                    <div class="contact-form">
+                        <h2>Contact Us</h2>
+                        <form>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" required></textarea>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2024 V4N1M4 Music NFT Marketplaces. All rights reserved.</p>
+        <p>© 2024 V4N1M4 Music NFT Marketplaces. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>
