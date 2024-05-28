@@ -1,0 +1,74 @@
+/* latest-releases.css */
+
+.latest-releases {
+    width: 100%; /* Full-page width */
+    background: rgba(0, 0, 0, 0.7); /* Match the V4N1M4 overlay section */
+    padding: 2em 1em;
+    margin: 0; /* Remove margin */
+    border-radius: 0; /* Remove border radius */
+    animation: fadeInUp 1s ease-out;
+}
+
+.latest-releases-heading {
+    color: #28a745; /* Green color */
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+#album-search {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    width: 80%; /* Adjust width */
+    border: 1px solid #28a745;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.album-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 80%; /* Match the width of the search bar */
+    margin: 0 auto; /* Center align */
+}
+
+.carousel-btn {
+    background: transparent;
+    border: 2px solid #28a745;
+    color: #28a745;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.carousel-btn:hover {
+    background: #28a745;
+    color: #ffffff;
+}
+
+.album-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.album-wrapper {
+    display: flex;
+    transition: transform 2s ease; /* Smooth animation */
+    width: 100%;
+}
+
+.album-info {
+    text-align: left;
+    min-width: 300px;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    margin: 0 1em;
+    flex: 1;
+}

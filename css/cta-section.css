@@ -1,0 +1,27 @@
+/* cta-section.css */
+
+.cta-section {
+    width: 100%;
+    padding: 2em 0;
+    background: #333;
+}
+
+.cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-image {
+    width: 25%;
+    margin-right: 2em;
+}
+
+.cta-text {
+    text-align: left;
+    max-width: 60%;
+}
+
+.cta-text h1, .cta-text h2, .cta-text h3, .cta-text p {
+    margin: 0.5em 0;
+}

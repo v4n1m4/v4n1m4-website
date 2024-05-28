@@ -1,0 +1,58 @@
+/* about-section.css */
+
+.about-section {
+    width: 100%;
+    padding: 2em 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.about-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 80%; /* Match the width of the search bar */
+    margin: 0 auto; /* Center align */
+}
+
+.carousel-btn {
+    background: transparent;
+    border: 2px solid #28a745;
+    color: #28a745;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.carousel-btn:hover {
+    background: #28a745;
+    color: #ffffff;
+}
+
+.about-wrapper {
+    display: flex;
+    transition: transform 2s ease; /* Smooth animation */
+    width: 100%;
+}
+
+.about-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    margin: 0 1em;
+    flex: 1;
+}
+
+.about-content {
+    margin-top: 2em;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
