@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="background-overlay"></div>
-    <?php include 'sections/header-albums-section.php'; ?>
+    <!--<?php include 'sections/header-albums-section.php'; ?>-->
     <main>
         <?php include 'sections/latest-releases.php'; ?>
         <?php include 'sections/buttons-section.php'; ?>
