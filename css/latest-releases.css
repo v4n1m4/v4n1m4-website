@@ -1,130 +1,109 @@
 /* latest-releases.css */
 
 .latest-releases {
-    width: 100%; /* Full-page width */
-    background: rgba(0, 0, 0, 0.7); /* Match the V4N1M4 overlay section */
-    padding: 2em 1em;
-    margin: 0; /* Remove margin */
-    border-radius: 0; /* Remove border radius */
-    animation: fadeInUp 1s ease-out;
+    text-align: center;
+    margin: 20px 0;
 }
 
 .latest-releases-heading {
-    color: #28a745; /* Green color */
     font-size: 2em;
-    margin-bottom: 1em;
+    color: #00ff00; /* Customize this color as needed */
+    margin-bottom: 20px;
 }
 
 #album-search {
-    padding: 0.5em;
-    margin-bottom: 1em;
-    width: 80%; /* Adjust width */
-    border: 1px solid #28a745;
-    border-radius: 4px;
-    box-sizing: border-box;
-    color: #000;
+    width: 80%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
 }
 
 .album-carousel {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    width: 80%; /* Match the width of the search bar */
-    margin: 0 auto; /* Center align */
-    padding: 4em 0;
 }
 
 .carousel-btn {
-    background: transparent;
-    border: 2px solid #28a745;
-    color: #28a745;
-    padding: 0.5em 1em;
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    color: #00ff00; /* Customize this color as needed */
     cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-}
-
-.carousel-btn:hover {
-    background: #28a745;
-    color: #ffffff;
+    z-index: 1;
 }
 
 .album-display {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
     overflow: hidden;
-    position: relative;
+    width: 80%;
+    display: flex;
+    justify-content: center;
 }
 
 .album-wrapper {
     display: flex;
-    transition: transform 2s ease; /* Smooth animation */
-    width: 100%;
+    transition: transform 0.5s ease-in-out;
 }
 
 .album {
-    display: inline-block;
-    width: 150px;
-    height: 150px;
     margin: 0 10px;
-    cursor: pointer;
-    transition: transform 0.3s;
     position: relative;
 }
 
 .album img {
-    width: 100%;
-    height: 100%;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
 
-.album:hover {
+.album img:hover {
     transform: scale(1.1);
 }
 
-.album[data-title]:hover::after {
+.album::after {
     content: attr(data-title);
     position: absolute;
-    bottom: -30px;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
-    padding: 0.5em;
-    border-radius: 4px;
+    padding: 5px;
+    border-radius: 5px;
     white-space: nowrap;
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
     transition: opacity 0.3s;
+    z-index: 2; /* Ensure tooltip is on top */
 }
 
-.album[data-title]::after {
-    opacity: 0;
-    visibility: hidden;
+.album:hover::after {
+    opacity: 1;
+    bottom: 110%; /* Move tooltip above the album */
 }
 
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 10;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
-    background-color: #333;
+    background-color: #fff;
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 800px;
+    max-width: 600px;
+    border-radius: 10px;
 }
 
 .close {
@@ -136,53 +115,7 @@
 
 .close:hover,
 .close:focus {
-    color: white;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
 }
-/* Add padding for tooltip */
-.album {
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: transform 0.3s;
-    position: relative;
-    padding-bottom: 60px; /* Added more padding */
-}
-
-/* Ensure tooltips are visible */
-.album[data-title]:hover::after {
-    content: attr(data-title);
-    position: absolute;
-    bottom: -40px; /* Adjusted to ensure visibility */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 0.5em;
-    border-radius: 4px;
-    white-space: nowrap;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s;
-}
-
-/* Fix squishing images */
-#album-container {
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-    align-items: center;
-}
-
-#album-container .album {
-    flex: 0 0 auto;
-    margin: 0 5px;
-}
-
-
-
-
-

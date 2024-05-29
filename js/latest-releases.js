@@ -1,69 +1,70 @@
-/* latest-releases.js */
+// latest-releases.js
 
-let currentIndex = 0;
-const albumsPerPage = 6;
+document.addEventListener("DOMContentLoaded", () => {
+    const albumCarousel = document.querySelector(".album-carousel");
+    const albumWrapper = document.querySelector(".album-wrapper");
+    const albums = document.querySelectorAll(".album");
+    const leftBtn = document.querySelector(".carousel-btn.left");
+    const rightBtn = document.querySelector(".carousel-btn.right");
+    let albumIndex = 0;
+    const albumsPerRow = 6;
 
-function updateAlbumDisplay() {
-    const albumWrapper = document.getElementById('album-container');
-    const totalAlbums = albumWrapper.children.length;
-    currentIndex = (currentIndex + totalAlbums) % totalAlbums;
-    albumWrapper.style.transform = `translateX(-${currentIndex * 160}px)`;
-}
+    const updateCarousel = () => {
+        const transformValue = -albumIndex * (albums[0].offsetWidth + 20); // 20px is the margin
+        albumWrapper.style.transform = `translateX(${transformValue}px)`;
+    };
 
-function scrollLeft() {
-    const albumWrapper = document.getElementById('album-container');
-    const totalAlbums = albumWrapper.children.length;
-    currentIndex = (currentIndex - 1 + totalAlbums) % totalAlbums;
-    updateAlbumDisplay();
-}
-
-function scrollRight() {
-    const albumWrapper = document.getElementById('album-container');
-    const totalAlbums = albumWrapper.children.length;
-    currentIndex = (currentIndex + 1) % totalAlbums;
-    updateAlbumDisplay();
-}
-
-function searchAlbums() {
-    const searchInput = document.getElementById('album-search').value.toLowerCase();
-    const albums = document.querySelectorAll('.album');
-    albums.forEach(album => {
-        const title = album.getAttribute('data-title').toLowerCase();
-        album.style.display = title.includes(searchInput) ? 'inline-block' : 'none';
+    rightBtn.addEventListener("click", () => {
+        albumIndex++;
+        if (albumIndex > albums.length - albumsPerRow) {
+            albumIndex = 0; // Loop back to the start
+        }
+        updateCarousel();
     });
-    updateAlbumDisplay(); // Ensure carousel updates after filtering
-}
 
-// Modal functionality
-const albums = document.querySelectorAll('.album');
-const modal = document.createElement('div');
-modal.className = 'modal';
-modal.innerHTML = `
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div id="modal-content"></div>
-    </div>
-`;
-document.body.appendChild(modal);
+    leftBtn.addEventListener("click", () => {
+        albumIndex--;
+        if (albumIndex < 0) {
+            albumIndex = albums.length - albumsPerRow; // Loop back to the end
+        }
+        updateCarousel();
+    });
 
-albums.forEach(album => {
-    album.addEventListener('click', () => {
-        const title = album.getAttribute('data-title');
-        document.getElementById('modal-content').innerHTML = `<h2>${title}</h2>`;
-        openModal();
+    const searchInput = document.getElementById("album-search");
+    searchInput.addEventListener("input", (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        albums.forEach(album => {
+            const title = album.getAttribute("data-title").toLowerCase();
+            if (title.includes(searchTerm)) {
+                album.style.display = "block";
+            } else {
+                album.style.display = "none";
+            }
+        });
+        // Reset the carousel index and update the display
+        albumIndex = 0;
+        updateCarousel();
+    });
+
+    albums.forEach(album => {
+        album.addEventListener("click", () => {
+            const modalId = album.getAttribute("data-modal");
+            const modal = document.getElementById(modalId);
+            modal.style.display = "block";
+        });
+    });
+
+    const modals = document.querySelectorAll(".modal");
+    modals.forEach(modal => {
+        const closeBtn = modal.querySelector(".close");
+        closeBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+        });
+    });
+
+    window.addEventListener("click", (e) => {
+        if (e.target.classList.contains("modal")) {
+            e.target.style.display = "none";
+        }
     });
 });
-
-function openModal() {
-    modal.style.display = 'block';
-}
-
-function closeModal() {
-    modal.style.display = 'none';
-}
-
-window.onclick = function(event) {
-    if (event.target === modal) {
-        closeModal();
-    }
-};
