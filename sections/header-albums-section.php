@@ -41,6 +41,8 @@
         <!-- Add more albums as needed -->
         <input type="text" id="albumSearch" onkeyup="filterAlbums()" placeholder="Search for albums..." class="album-search">
     </div>
+    <button id="left-arrow" class="arrow">&lt;</button>
+    <button id="right-arrow" class="arrow">&gt;</button>
 </div>
 
 <!-- Modal for album details -->
