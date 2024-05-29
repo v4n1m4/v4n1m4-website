@@ -1,34 +1,113 @@
 /* artist-profile-section.css */
 
-.artist-profile-section {
-    width: 100%;
-    padding: 2em 0;
+.artist-profile {
     background: rgba(0, 0, 0, 0.7);
-}
-
-.artist-info {
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    background: url('artist-profile-bg.jpg') no-repeat center center;
-    background-size: cover;
+    border-radius: 8px;
     padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 2em 0;
+    color: #ffffff;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.profile-section {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 1em;
-    border-radius: 8px;
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2em;
 }
 
-.profile-section h3, .profile-section ul, .profile-section p {
-    margin: 1em 0;
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
 
-.profile-section ul {
-    list-style-type: disc;
+.profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
     margin-left: 2em;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #00d1b2;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #00a6a6;
+}
+
+.profile-info .stars {
+    color: #ffdd57;
+}
+
+.message-btn, .contact-btn {
+    background: #00d1b2;
+    border: none;
+    color: white;
+    padding: 0.5em 1em;
+    margin: 1em 0.5em 0 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.profile-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.details-left, .details-right {
+    width: 48%;
+}
+
+.details-left h3, .details-right h3 {
+    font-size: 1.2em;
+    color: #00d1b2;
+    margin-bottom: 0.5em;
+}
+
+.details-left p, .details-right p {
+    margin: 0.5em 0;
+    line-height: 1.5;
+}
+
+.profile-metrics {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.goals, .achievements {
+    width: 48%;
+}
+
+.goals h3, .achievements h3 {
+    font-size: 1.2em;
+    color: #00d1b2;
+    margin-bottom: 0.5em;
+}
+
+.goals ul, .achievements ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.goals li, .achievements li {
+    background: #333;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border-radius: 4px;
+}
+
+/* Ensure there is a margin to separate the sections */
+.artist-profile + .cta-contact {
+    margin-top: 2em;
 }

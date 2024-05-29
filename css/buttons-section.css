@@ -1,57 +1,40 @@
 /* buttons-section.css */
 
-.button-rows {
+.buttons-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-   
     justify-content: center;
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 1em;
-    background: rgba(0, 0, 0, 0.7); /* Match the V4N1M4 overlay section */
     padding: 2em 1em;
-    border-radius: 0;
+    text-align: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Match the V4N1M4 overlay section */
 }
 
-.button-rows .row {
+.buttons-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0.5em 0;
-    width: 100%;
-    max-width: 1200px;
+    margin-bottom: 1em;
 }
 
-.button-rows .row h3 {
-    margin-bottom: 0.5em;
-    color: #28a745;
-    flex-basis: 100%;
-    text-align: center;
-}
-
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0.5em;
-    padding: 0.75em 1.5em;
-    font-size: 1em;
-    color: #ffffff;
-    background: #28a745; /* Green button */
+.button {
+    background: #28a745;
     border: none;
-    border-radius: 25px;
+    color: white;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border-radius: 4px;
     text-decoration: none;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s;
+    cursor: pointer;
 }
 
-.btn img {
+.button:hover {
+    background: #218838;
+}
+
+.button img {
     margin-right: 0.5em;
-    width: 20px;
-    height: 20px;
-}
-
-.btn:hover {
-    background: #218838; /* Darker green on hover */
-    transform: scale(1.05);
+    vertical-align: middle;
 }

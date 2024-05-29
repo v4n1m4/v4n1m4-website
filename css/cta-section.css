@@ -1,27 +1,40 @@
 /* cta-section.css */
 
-.cta-section {
-    width: 100%;
+.cta {
+    background: linear-gradient(90deg, #1d2671, #c33764);
+    color: #fff;
     padding: 2em 0;
-    background: #333;
+    text-align: center;
+    margin: 2em 0;
 }
 
 .cta-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
 }
 
-.cta-image {
-    width: 25%;
-    margin-right: 2em;
-}
-
-.cta-text {
-    text-align: left;
-    max-width: 60%;
-}
-
-.cta-text h1, .cta-text h2, .cta-text h3, .cta-text p {
+.cta h1, .cta h2 {
     margin: 0.5em 0;
+    font-weight: 700;
+}
+
+.cta p {
+    margin: 1em 0;
+    font-size: 1.2em;
+}
+
+.cta-button {
+    background: #00d1b2;
+    color: #fff;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #00a6a6;
 }

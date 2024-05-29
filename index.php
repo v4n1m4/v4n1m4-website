@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="css/cta-section.css">
     <link rel="stylesheet" href="css/artist-profile-section.css">
     <link rel="stylesheet" href="css/cta-contact-section.css">
+    <link rel="stylesheet" href="css/header-albums-section.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="background-overlay"></div>
-    <?php include 'sections/header.php'; ?>
+    <?php include 'sections/header-albums-section.php'; ?>
     <main>
         <?php include 'sections/latest-releases.php'; ?>
         <?php include 'sections/buttons-section.php'; ?>
@@ -34,5 +35,6 @@
     <script src="js/cta-section.js"></script>
     <script src="js/artist-profile-section.js"></script>
     <script src="js/cta-contact-section.js"></script>
+    <script src="js/header-albums-section.js"></script>
 </body>
 </html>
