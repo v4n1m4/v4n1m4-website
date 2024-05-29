@@ -64,38 +64,6 @@
     width: 100%;
 }
 
-.album-info {
-    text-align: left;
-    min-width: 300px;
-    padding: 1em;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 8px;
-    margin: 0 1em;
-    flex: 1;
-}
-/* header-albums-section.css */
-
-.header-albums {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 4em 0;
-}
-
-.album-search {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.album-container {
-    display: flex;
-    transition: transform 0.5s ease;
-    padding: 10px;
-}
-
 .album {
     display: inline-block;
     width: 150px;
@@ -136,94 +104,6 @@
 .album[data-title]::after {
     opacity: 0;
     visibility: hidden;
-}
-
-/* header-albums-section.css */
-
-.header-albums {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 4em 0;
-}
-
-.album-search {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.album-container {
-    display: flex;
-    transition: transform 0.5s ease;
-    padding: 10px;
-    max-width: calc(6 * 170px); /* Limit to 6 albums per row with margin */
-    margin: 0 auto;
-}
-
-.album {
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    margin: 0 10px;
-    cursor: pointer;
-    transition: transform 0.3s;
-    position: relative;
-}
-
-.album img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.album:hover {
-    transform: scale(1.1);
-}
-
-.album[data-title]:hover::after {
-    content: attr(data-title);
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 0.5em;
-    border-radius: 4px;
-    white-space: nowrap;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s;
-}
-
-.album[data-title]::after {
-    opacity: 0;
-    visibility: hidden;
-}
-
-.arrow {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    color: #fff;
-}
-
-#left-arrow {
-    left: -25px; /* Adjusted to be within the viewport */
-}
-
-#right-arrow {
-    right: -25px; /* Adjusted to be within the viewport */
 }
 
 .modal {
@@ -260,3 +140,49 @@
     text-decoration: none;
     cursor: pointer;
 }
+/* Add padding for tooltip */
+.album {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    position: relative;
+    padding-bottom: 60px; /* Added more padding */
+}
+
+/* Ensure tooltips are visible */
+.album[data-title]:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: -40px; /* Adjusted to ensure visibility */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 0.5em;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s;
+}
+
+/* Fix squishing images */
+#album-container {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+#album-container .album {
+    flex: 0 0 auto;
+    margin: 0 5px;
+}
+
+
+
+
+
